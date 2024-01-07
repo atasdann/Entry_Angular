@@ -1,0 +1,12 @@
+*{
+  padding: 15px;
+}
+div#test{
+  color: red;
+  // &>h2{
+  //   color: blue;
+  // }
+  h2{ //scss'in gruplama özelliği, üstteki 1. yöntemdir.
+    color: blue;
+  }
+}

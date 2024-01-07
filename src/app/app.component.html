@@ -1,0 +1,41 @@
+<div id="test"> {{text}} </div>
+<input type="text" [(ngModel)]="text">  <!-- (change)="onChange($event)"-->
+<button (click)="click()" (mouseover)="onMouseOver()">Tıkla</button>
+
+<div>
+  <h2>{{title}}</h2>
+</div>
+
+<!--sayının yanında tek mi çift mi yazacak, butona basınca sayı 1 artacaktır-->
+<div>{{num1}} - {{getString()}}</div>
+<!-- <div>{{getString()}}</div> -->
+<button (click)="addOne()">Arttır</button>
+
+<!--Girilen sayılar arasındaki tüm doğal sayılar-->
+<div>
+  <input type="number" [(ngModel)]="x">
+  <input type="number" [(ngModel)]="n">
+
+  <div>
+    {{getList()|json}} <!--gelen veriyi json'a çeviriyor-->
+  </div>
+</div>
+
+<!--Klavyeden girilecek n değerine kadar olan Fibonacci Dizisi-->
+<div>
+  <input type="number" [(ngModel)]="flimit">
+</div>
+<div>
+  {{getFibonacci()|json}}
+</div>
+
+<!--bölme işlemi-->
+<div>
+  <input type="number" [(ngModel)]="bolunen">
+  <input type="number" [(ngModel)]="bolen">
+  <div>{{bolum}}</div>
+  <div>{{kalan}}</div>
+  <button (click)="calculateDivide()">Hesapla</button>
+</div>
+
+<!---->
